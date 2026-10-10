@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanushka Yadav | DevOps Engineer Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0a0f1d',
+                            800: '#111827',
+                            700: '#1f2937',
+                            600: '#374151',
+                        },
+                        accent: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            400: '#818cf8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(31, 41, 55, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 antialiased selection:bg-accent-500 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gray-800/80 bg-dark-900/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-accent-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+                TANUSHKA.DEV
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-accent-400 transition">About</a>
+                <a href="#skills" class="hover:text-accent-400 transition">Skills</a>
+                <a href="#experience" class="hover:text-accent-400 transition">Experience</a>
+                <a href="#projects" class="hover:text-accent-400 transition">Projects</a>
+                <a href="#education" class="hover:text-accent-400 transition">Education</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-accent-500 to-indigo-600 text-white font-semibold shadow-lg shadow-accent-500/25 hover:opacity-90 transition">Contact Me</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-dark-900/95 border-b border-gray-800 flex flex-col gap-4">
+            <a href="#about" class="mobile-link text-gray-300 hover:text-accent-400 font-medium">About</a>
+            <a href="#skills" class="mobile-link text-gray-300 hover:text-accent-400 font-medium">Skills</a>
+            <a href="#experience" class="mobile-link text-gray-300 hover:text-accent-400 font-medium">Experience</a>
+            <a href="#projects" class="mobile-link text-gray-300 hover:text-accent-400 font-medium">Projects</a>
+            <a href="#education" class="mobile-link text-gray-300 hover:text-accent-400 font-medium">Education</a>
+            <a href="#contact" class="mobile-link text-center py-3 rounded-xl bg-accent-500 text-white font-semibold">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
+        <!-- Background Gradients -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[350px] h-[350px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-accent-500/30 text-accent-400 text-sm font-medium mb-8 animate-pulse">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Available for New Opportunities
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Hi, I'm <span class="bg-gradient-to-r from-accent-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">Tanushka Yadav</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl font-semibold text-gray-300 mb-6">
+                DevOps Engineer | Cloud & Infrastructure Specialist
+            </p>
+            
+            <p class="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Hands-on experience in AWS, Azure, and GCP. Skilled in CI/CD automation, Infrastructure as Code (IaC), containerization, and Kubernetes deployments.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#projects" class="px-8 py-4 rounded-xl bg-gradient-to-r from-accent-500 to-indigo-600 text-white font-semibold shadow-xl shadow-accent-500/25 hover:opacity-90 transition flex items-center gap-2">
+                    <i data-lucide="code-2" class="w-5 h-5"></i> View Projects
+                </a>
+                <a href="#contact" class="px-8 py-4 rounded-xl glass-card text-gray-200 font-semibold hover:border-accent-400 transition flex items-center gap-2">
+                    <i data-lucide="mail" class="w-5 h-5"></i> Get in Touch
+                </a>
+            </div>
+
+            <!-- Quick Info Badges -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                <div class="glass-card p-4 rounded-2xl text-center">
+                    <div class="text-accent-400 font-bold text-xl">AWS & Azure</div>
+                    <div class="text-xs text-gray-400 mt-1">Cloud Platforms</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl text-center">
+                    <div class="text-accent-400 font-bold text-xl">Terraform</div>
+                    <div class="text-xs text-gray-400 mt-1">Infrastructure as Code</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl text-center">
+                    <div class="text-accent-400 font-bold text-xl">K8s & Helm</div>
+                    <div class="text-xs text-gray-400 mt-1">Orchestration</div>
+                </div>
+                <div class="glass-card p-4 rounded-2xl text-center">
+                    <div class="text-accent-400 font-bold text-xl">Jenkins</div>
+                    <div class="text-xs text-gray-400 mt-1">CI/CD Automation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Summary Section -->
+    <section id="about" class="py-24 px-6 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Professional Summary</h2>
+                <div class="w-20 h-1.5 bg-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    DevOps Engineer with hands-on experience in AWS and exposure to Microsoft Azure and GCP. Skilled in Jenkins, GitHub Actions, Git, Docker, Kubernetes, Helm, Terraform, Linux, ECR, Maven, and SonarQube. Experienced in CI/CD automation, Infrastructure as Code (IaC), containerization, Kubernetes deployments, cloud infrastructure, monitoring, and troubleshooting.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Successfully collaborated with development and operations teams to automate deployments, improve software delivery speeds, and maintain robust, reliable application environments.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-24 px-6 bg-dark-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical Expertise</h2>
+                <div class="w-20 h-1.5 bg-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card: Cloud -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-accent-500/20 text-accent-400 flex items-center justify-center mb-6">
+                            <i data-lucide="cloud" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Cloud Platforms</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">AWS</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Microsoft Azure</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Google Cloud (GCP)</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">EC2 / EKS / S3</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">AKS / ACR</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">GKE / Artifact Registry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: CI/CD & IaC -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">CI/CD & IaC</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Jenkins & Jenkinsfile</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">GitHub Actions</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Terraform</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">AWS CloudFormation</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">SonarQube & Maven</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: Containerization -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-6">
+                            <i data-lucide="boxes" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Containers & Orchestration</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Docker & Docker Compose</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Kubernetes (K8s)</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Helm Charts</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Amazon ECR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: Monitoring -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-6">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Monitoring & Observability</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Datadog</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Prometheus</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Grafana</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">AWS CloudWatch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: Systems & Scripting -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-6">
+                            <i data-lucide="terminal" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">OS & Scripting</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Linux (Ubuntu)</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Bash / Shell Scripting</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Python</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Git & GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: AI Tools & Databases -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-6">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Databases & AI Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">MongoDB Atlas</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">PostgreSQL / MySQL</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Claude & Google Gemini</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-dark-700 text-gray-300 text-xs font-medium">Cursor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Professional Experience</h2>
+                <div class="w-20 h-1.5 bg-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative border-l-2 border-accent-500/30 pl-6 md:pl-10 ml-4 md:ml-32 space-y-12">
+                <!-- Experience Item -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] md:-left-[51px] top-1.5 w-4 h-4 rounded-full bg-accent-500 border-4 border-dark-900 shadow"></div>
+                    
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">DevOps Engineer</h3>
+                                <p class="text-accent-400 font-medium text-lg">Signovate Technologies</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 inline-block px-4 py-1.5 rounded-full bg-accent-500/10 text-accent-400 text-sm font-semibold w-fit">
+                                Jan 2024 - Present
+                            </span>
+                        </div>
+
+                        <ul class="space-y-3 text-gray-300 list-disc list-inside text-sm md:text-base leading-relaxed">
+                            <li>Wrote Jenkins CI/CD pipelines using Jenkinsfile to automate GitHub code checkout, Maven build and testing, SonarQube code-quality analysis, Docker image build and tagging, push to Amazon ECR, and application deployment.</li>
+                            <li>Wrote Terraform modules and configurations using variables and outputs to provision AWS resources (VPC, EC2, IAM, S3, ALB, ECR, EKS, Auto Scaling) using S3 for remote state.</li>
+                            <li>Automated Azure infrastructure provisioning (VMs, VNet, NSG, Blob Storage, Load Balancer, ACR, and AKS) and GCP resources (Compute Engine, VPC, GKE) using Terraform.</li>
+                            <li>Containerized applications using Docker and Docker Compose; deployed microservices on Amazon EKS and AKS with Rolling Updates, ConfigMaps, Secrets, and HPA.</li>
+                            <li>Used Helm for Kubernetes deployments, configuring Liveness/Readiness Probes, HPA, and performing smooth upgrades and rollbacks.</li>
+                            <li>Maintained Ubuntu/Linux servers, wrote Bash scripts and cron jobs for routine task automation (disk-space & service checks).</li>
+                            <li>Configured monitoring and alerts using Datadog, Prometheus, Grafana, and AWS CloudWatch.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 bg-dark-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+                <div class="w-20 h-1.5 bg-accent-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-accent-500/20 text-accent-400 flex items-center justify-center">
+                                <i data-lucide="layers" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-accent-500/10 text-accent-400">AWS Ecosystem</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Learning Management System</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Designed and maintained end-to-end CI/CD pipelines using Jenkins, GitHub, Maven, SonarQube, and Docker, automating build, testing, and deployment on Amazon EKS.
+                        </p>
+                        <div class="space-y-2 mb-6 text-sm text-gray-300">
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent-400"></i> Provisioned AWS infrastructure via Terraform modules (VPC, EKS, S3, ALB, Route 53).</div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent-400"></i> Deployed containerized Spring Boot microservices with Helm & HPA.</div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent-400"></i> Hosted React frontend on Amazon S3 with CloudFront and integrated MongoDB Atlas.</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">AWS</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">Terraform</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">Jenkins</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">Kubernetes</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">Helm</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">Datadog</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                                <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400">Azure Ecosystem</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">E-Commerce Platform</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Designed and deployed a scalable three-tier application on Azure, using VMs, VNet, NSG, Load Balancer, AKS, ACR, and Blob Storage.
+                        </p>
+                        <div class="space-y-2 mb-6 text-sm text-gray-300">
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-400"></i> Containerized applications with Docker and deployed on AKS using Helm charts.</div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-400"></i> Implemented Jenkins CI/CD for automated build, testing, ACR push, and AKS deployment.</div>
+                            <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-400"></i> Managed Azure infrastructure using Terraform with reusable modules and variables.</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">Azure</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">Terraform</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">Jenkins</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">AKS</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">Helm</span>
+                        <span class="px-2.5 py-1 rounded-md bg-dark-700 text-gray-300 text-xs">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certification Section -->
+    <section id="education" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Education -->
+            <div>
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold mb-2">Education</h2>
+                    <div class="w-16 h-1 bg-accent-500 rounded-full"></div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold">Bachelor of Science – Computer Science</h3>
+                            <p class="text-accent-400 font-medium">Dr. Ambedkar College of Arts, Commerce & Science</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-accent-500/10 text-accent-400 text-xs font-semibold">2021 - 2024</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Focused on core computer science fundamentals, data structures, systems, and software engineering.</p>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div>
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold mb-2">Certifications</h2>
+                    <div class="w-16 h-1 bg-accent-500 rounded-full"></div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl flex items-center gap-6">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                        <i data-lucide="award" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">AWS Certified Cloud Practitioner</h3>
+                        <p class="text-emerald-400 text-sm font-medium flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4"></i> Completed & Verified</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="py-24 px-6 bg-dark-800/50 border-t border-gray-800/80">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
+            <p class="text-gray-400 mb-12 max-w-lg mx-auto">I'm actively looking for new DevOps and Cloud engineering opportunities. Feel free to reach out via email or LinkedIn!</p>
+
+            <div class="flex flex-wrap justify-center gap-6 mb-16">
+                <a href="mailto:ytanushka498@gmail.com" class="glass-card px-6 py-4 rounded-2xl flex items-center gap-3 hover:border-accent-400 transition">
+                    <i data-lucide="mail" class="w-5 h-5 text-accent-400"></i>
+                    <span class="text-gray-200 font-medium">ytanushka498@gmail.com</span>
+                </a>
+                <a href="tel:+917388749557" class="glass-card px-6 py-4 rounded-2xl flex items-center gap-3 hover:border-accent-400 transition">
+                    <i data-lucide="phone" class="w-5 h-5 text-accent-400"></i>
+                    <span class="text-gray-200 font-medium">+91 7388749557</span>
+                </a>
+                <a href="https://linkedin.com/in/tanushka-yadav04" target="_blank" class="glass-card px-6 py-4 rounded-2xl flex items-center gap-3 hover:border-accent-400 transition">
+                    <i data-lucide="linkedin" class="w-5 h-5 text-accent-400"></i>
+                    <span class="text-gray-200 font-medium">LinkedIn Profile</span>
+                </a>
+            </div>
+
+            <p class="text-gray-500 text-sm">&copy; 2026 Tanushka Yadav. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- Script to initialize Lucide icons and mobile menu -->
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
